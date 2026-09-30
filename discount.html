@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="The Beat Mob discount rack — store catalog beats at listed prices." />
+    <title>The Beat Mob · Discount Rack</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/store.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap-wide header-inner">
+        <div class="brand-mark">The Beat <span>Mob</span></div>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="index.html">Vault Player</a>
+          <a class="active" href="discount.html">Discount Rack</a>
+          <a class="btn-buy" href="https://thebeatmob.gumroad.com/" target="_blank" rel="noopener noreferrer">Buy on Gumroad</a>
+          <a href="https://thebeatmob.com/" target="_blank" rel="noopener noreferrer">Shop</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap-wide">
+      <section class="hero" style="text-align:left">
+        <div class="hero-kicker">Separate rack · store catalog</div>
+        <h1>Discount <em>Rack</em></h1>
+        <p class="hero-copy" style="margin-left:0">
+          Store-catalog beats at 50% off the source single ($19.99 → $9.99). One playlist preview stays unpriced.
+        </p>
+      </section>
+
+      <div class="page-note">50% off the listed single price: <strong>$19.99</strong> → <strong>$9.99</strong> (half of $19.99 is $9.995; displayed as $9.99). Bundle savings from the source catalog are separate. Vault Vol. 1 on the main page is unchanged.</div>
+
+      <div class="toolbar">
+        <label class="search">
+          <input id="search" type="search" placeholder="Search title, BPM, key, tag…" autocomplete="off" />
+        </label>
+      </div>
+
+      <div class="beat-grid" id="rack-grid"></div>
+    </main>
+
+    <footer class="wrap-wide site-footer">
+      <div>© The Beat Mob · Brian Jutz. Sale: $19.99 → $9.99 (50% off; half of 19.99 is 9.995, shown as 9.99).</div>
+      <div><a href="index.html">← Back to Vault Player</a></div>
+    </footer>
+
+    <div class="player" role="region" aria-label="Beat player">
+      <div class="wrap-wide player-inner">
+        <div class="now">
+          <div class="now-art" id="now-art">BM</div>
+          <div class="now-text">
+            <div class="now-title" id="now-title">Select a beat</div>
+            <div class="now-sub" id="now-sub">Discount rack</div>
+          </div>
+        </div>
+        <div class="transport">
+          <div class="transport-controls">
+            <button class="t-btn" id="btn-prev" type="button" aria-label="Previous"></button>
+            <button class="t-btn main" id="btn-play" type="button" aria-label="Play or pause"></button>
+            <button class="t-btn" id="btn-next" type="button" aria-label="Next"></button>
+          </div>
+          <div class="progress-row">
+            <span class="time" id="cur-time">0:00</span>
+            <input class="seek" id="seek" type="range" min="0" max="1000" value="0" aria-label="Seek" />
+            <span class="time" id="dur-time">0:00</span>
+          </div>
+        </div>
+        <div class="player-side">
+          <input class="volume" id="volume" type="range" min="0" max="1" step="0.01" value="0.9" aria-label="Volume" />
+          <a class="ghost-btn" href="https://thebeatmob.gumroad.com/" target="_blank" rel="noopener noreferrer">License</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/player-core.js"></script>
+    <script src="js/discount.js"></script>
+  </body>
+</html>
