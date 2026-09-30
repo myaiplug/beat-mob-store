@@ -1,0 +1,535 @@
+{
+  "storeName": "The Beat Mob",
+  "producer": "Brian Jutz / The Beat Mob",
+  "buy": {
+    "gumroad": "https://thebeatmob.gumroad.com/",
+    "shop": "https://thebeatmob.com/"
+  },
+  "vault": [
+    {
+      "id": "vault-01",
+      "num": 1,
+      "title": "FIRST QUARTER (SERVIN)",
+      "bpm": null,
+      "audioUrl": "https://myaiplug.github.io/signal-chain/vault/01-first-quarter-servin.mp3",
+      "file": "vault/01-first-quarter-servin.mp3",
+      "producedBy": "Brian Jutz / The Beat Mob",
+      "note": "Vault Vol. 1 tagged preview (~40s)"
+    },
+    {
+      "id": "vault-02",
+      "num": 2,
+      "title": "MOTION",
+      "bpm": null,
+      "audioUrl": "https://myaiplug.github.io/signal-chain/vault/02-motion.mp3",
+      "file": "vault/02-motion.mp3",
+      "producedBy": "Brian Jutz / The Beat Mob",
+      "note": "Vault Vol. 1 tagged preview (~40s)"
+    },
+    {
+      "id": "vault-03",
+      "num": 3,
+      "title": "BUILT DIFFERENT",
+      "bpm": null,
+      "audioUrl": "https://myaiplug.github.io/signal-chain/vault/03-built-different.mp3",
+      "file": "vault/03-built-different.mp3",
+      "producedBy": "Brian Jutz / The Beat Mob",
+      "note": "Vault Vol. 1 tagged preview (~40s)"
+    },
+    {
+      "id": "vault-04",
+      "num": 4,
+      "title": "AFTER HOURS",
+      "bpm": null,
+      "audioUrl": "https://myaiplug.github.io/signal-chain/vault/04-after-hours.mp3",
+      "file": "vault/04-after-hours.mp3",
+      "producedBy": "Brian Jutz / The Beat Mob",
+      "note": "Vault Vol. 1 tagged preview (~40s)"
+    },
+    {
+      "id": "vault-05",
+      "num": 5,
+      "title": "NO BACKUP PLAN",
+      "bpm": 152,
+      "audioUrl": "https://myaiplug.github.io/signal-chain/vault/05-no-backup-plan-152.mp3",
+      "file": "vault/05-no-backup-plan-152.mp3",
+      "producedBy": "Brian Jutz / The Beat Mob",
+      "note": "Vault Vol. 1 tagged preview (~40s)"
+    },
+    {
+      "id": "vault-06",
+      "num": 6,
+      "title": "LONG WAY DOWN",
+      "bpm": null,
+      "audioUrl": "https://myaiplug.github.io/signal-chain/vault/06-long-way-down.mp3",
+      "file": "vault/06-long-way-down.mp3",
+      "producedBy": "Brian Jutz / The Beat Mob",
+      "note": "Vault Vol. 1 tagged preview (~40s)"
+    },
+    {
+      "id": "vault-07",
+      "num": 7,
+      "title": "APPLIED PRESSURE",
+      "bpm": null,
+      "audioUrl": "https://myaiplug.github.io/signal-chain/vault/07-applied-pressure.mp3",
+      "file": "vault/07-applied-pressure.mp3",
+      "producedBy": "Brian Jutz / The Beat Mob",
+      "note": "Vault Vol. 1 tagged preview (~40s)"
+    },
+    {
+      "id": "vault-08",
+      "num": 8,
+      "title": "RISK TAKER",
+      "bpm": 161,
+      "audioUrl": "https://myaiplug.github.io/signal-chain/vault/08-risk-taker-161.mp3",
+      "file": "vault/08-risk-taker-161.mp3",
+      "producedBy": "Brian Jutz / The Beat Mob",
+      "note": "Vault Vol. 1 tagged preview (~40s)"
+    },
+    {
+      "id": "vault-09",
+      "num": 9,
+      "title": "SICK N TIRED",
+      "bpm": 129,
+      "audioUrl": "https://myaiplug.github.io/signal-chain/vault/09-sick-n-tired-129.mp3",
+      "file": "vault/09-sick-n-tired-129.mp3",
+      "producedBy": "Brian Jutz / The Beat Mob",
+      "note": "Vault Vol. 1 tagged preview (~40s)"
+    },
+    {
+      "id": "vault-10",
+      "num": 10,
+      "title": "SOUTHSIDE BUSINESS",
+      "bpm": null,
+      "audioUrl": "https://myaiplug.github.io/signal-chain/vault/10-southside-business.mp3",
+      "file": "vault/10-southside-business.mp3",
+      "producedBy": "Brian Jutz / The Beat Mob",
+      "note": "Vault Vol. 1 tagged preview (~40s)"
+    },
+    {
+      "id": "vault-11",
+      "num": 11,
+      "title": "STREET CODE",
+      "bpm": null,
+      "audioUrl": "https://myaiplug.github.io/signal-chain/vault/11-street-code.mp3",
+      "file": "vault/11-street-code.mp3",
+      "producedBy": "Brian Jutz / The Beat Mob",
+      "note": "Vault Vol. 1 tagged preview (~40s)"
+    },
+    {
+      "id": "vault-12",
+      "num": 12,
+      "title": "TIME IS MONEY",
+      "bpm": 129,
+      "audioUrl": "https://myaiplug.github.io/signal-chain/vault/12-time-is-money-129.mp3",
+      "file": "vault/12-time-is-money-129.mp3",
+      "producedBy": "Brian Jutz / The Beat Mob",
+      "note": "Vault Vol. 1 tagged preview (~40s)"
+    },
+    {
+      "id": "vault-13",
+      "num": 13,
+      "title": "WHATCHU KNOW BOUT IT",
+      "bpm": null,
+      "audioUrl": "https://myaiplug.github.io/signal-chain/vault/13-whatchu-know-bout-it.mp3",
+      "file": "vault/13-whatchu-know-bout-it.mp3",
+      "producedBy": "Brian Jutz / The Beat Mob",
+      "note": "Vault Vol. 1 tagged preview (~40s)"
+    }
+  ],
+  "discountRack": [
+    {
+      "id": "ai-trap-heavy-142",
+      "title": "AI Trap Heavy 142",
+      "bpm": 142,
+      "key": "F# Minor",
+      "genre": "Trap",
+      "tags": [
+        "AI-generated",
+        "Heavy 808s",
+        "Dark",
+        "Workout"
+      ],
+      "audioUrl": "https://myaiplug.github.io/signal-chain/beats/trap-heavy-142-v1.m4a",
+      "producedBy": "The Beat Mob AI",
+      "license": "unlimited",
+      "price": {
+        "single": 19.99,
+        "bundle5": 69.99,
+        "bundle10": 99.99
+      },
+      "description": "AI-crafted trap banger with thunderous 808s, haunting melody, and crisp hi-hats. Generated at 142 BPM for maximum energy. Perfect for dark trap, drill, or high-energy workout playlists.",
+      "releaseDate": "2026-06-11"
+    },
+    {
+      "id": "ai-west-coast-96",
+      "title": "AI West Coast 96",
+      "bpm": 96,
+      "key": "G Major",
+      "genre": "West Coast Hip Hop",
+      "tags": [
+        "AI-generated",
+        "G-Funk",
+        "Smooth",
+        "Cruising"
+      ],
+      "audioUrl": "https://myaiplug.github.io/signal-chain/beats/west-coast-96.m4a",
+      "producedBy": "The Beat Mob AI",
+      "license": "unlimited",
+      "price": {
+        "single": 19.99,
+        "bundle5": 69.99,
+        "bundle10": 99.99
+      },
+      "description": "Classic West Coast vibe at 96 BPM. Warm synth leads, deep funk bassline, and swung drums. Built for laid-back storytelling, cruising music, or smooth hook-driven tracks.",
+      "releaseDate": "2026-06-13"
+    },
+    {
+      "id": "south-memphis-78-alt",
+      "title": "South Memphis 78 (Alt)",
+      "bpm": 78,
+      "key": "D Minor",
+      "genre": "Memphis Phonk / Trap",
+      "tags": [
+        "Phonk",
+        "Slow",
+        "Dark",
+        "Cowbell",
+        "Alternate"
+      ],
+      "audioUrl": "https://myaiplug.github.io/signal-chain/beats/south-memphis-78-alt.m4a",
+      "producedBy": "The Beat Mob AI",
+      "license": "unlimited",
+      "price": {
+        "single": 19.99,
+        "bundle5": 69.99,
+        "bundle10": 99.99
+      },
+      "description": "Alternate take on the South Memphis 78 phonk session. Heavier cowbell, deeper 808 saturation, darker atmosphere. Classic Memphis sound at half-time tempo.",
+      "releaseDate": "2026-08-24"
+    },
+    {
+      "id": "cross-bang",
+      "title": "Cross Bang",
+      "bpm": 138,
+      "key": "A Minor",
+      "genre": "Trap / Drill",
+      "tags": [
+        "Aggressive",
+        "Drill",
+        "UK Influence",
+        "High Energy"
+      ],
+      "audioUrl": "https://myaiplug.github.io/signal-chain/beats/cross-bang.m4a",
+      "producedBy": "The Beat Mob AI",
+      "license": "unlimited",
+      "price": {
+        "single": 19.99,
+        "bundle5": 69.99,
+        "bundle10": 99.99
+      },
+      "description": "UK drill meets US trap. Sliding 808s, rapid hi-hat triplets, menacing piano stabs. Built for aggressive flows and high-impact drops.",
+      "releaseDate": "2026-08-24"
+    },
+    {
+      "id": "detroit-85",
+      "title": "Detroit 85",
+      "bpm": 85,
+      "key": "C# Minor",
+      "genre": "Detroit Hip Hop / Boom Bap",
+      "tags": [
+        "Boom Bap",
+        "Soulful",
+        "Sample-based Feel",
+        "Jazz Chords"
+      ],
+      "audioUrl": "https://myaiplug.github.io/signal-chain/beats/detroit-85.m4a",
+      "producedBy": "The Beat Mob AI",
+      "license": "unlimited",
+      "price": {
+        "single": 19.99,
+        "bundle5": 69.99,
+        "bundle10": 99.99
+      },
+      "description": "Soulful Detroit boom bap at 85 BPM. Dusty drums, jazz chord progressions, warm vinyl texture. Made for conscious lyrics and storytelling.",
+      "releaseDate": "2026-08-24"
+    },
+    {
+      "id": "east-coast-98",
+      "title": "East Coast 98",
+      "bpm": 98,
+      "key": "Bb Minor",
+      "genre": "East Coast Hip Hop / Boom Bap",
+      "tags": [
+        "Boom Bap",
+        "Golden Era",
+        "Piano Loop",
+        "Hard Drums"
+      ],
+      "audioUrl": "https://myaiplug.github.io/signal-chain/beats/east-coast-98.m4a",
+      "producedBy": "The Beat Mob AI",
+      "license": "unlimited",
+      "price": {
+        "single": 19.99,
+        "bundle5": 69.99,
+        "bundle10": 99.99
+      },
+      "description": "Classic 90s East Coast boom bap. Piano-driven loop, punchy kick/snare, deep bass. Authentic golden era sound for pure lyricism.",
+      "releaseDate": "2026-08-24"
+    },
+    {
+      "id": "heater",
+      "title": "Heater",
+      "bpm": 140,
+      "key": "E Minor",
+      "genre": "Trap / Club",
+      "tags": [
+        "Club",
+        "High Energy",
+        "Festival",
+        "Anthem"
+      ],
+      "audioUrl": "https://myaiplug.github.io/signal-chain/beats/heater.m4a",
+      "producedBy": "The Beat Mob AI",
+      "license": "unlimited",
+      "price": {
+        "single": 19.99,
+        "bundle5": 69.99,
+        "bundle10": 99.99
+      },
+      "description": "Festival-ready trap heater at 140 BPM. Massive drop, euphoric lead, rolling bass. Designed for main stage energy and crowd reaction.",
+      "releaseDate": "2026-08-24"
+    },
+    {
+      "id": "modern-hiphop-105",
+      "title": "Modern Hip Hop 105",
+      "bpm": 105,
+      "key": "F Minor",
+      "genre": "Modern Hip Hop / Trap",
+      "tags": [
+        "Contemporary",
+        "Melodic",
+        "Versatile",
+        "Radio-ready"
+      ],
+      "audioUrl": "https://myaiplug.github.io/signal-chain/beats/modern-hiphop-105.m4a",
+      "producedBy": "The Beat Mob AI",
+      "license": "unlimited",
+      "price": {
+        "single": 19.99,
+        "bundle5": 69.99,
+        "bundle10": 99.99
+      },
+      "description": "Contemporary melodic trap at 105 BPM. Emotional chord progression, modern drum programming, space for vocals. Radio-ready structure with intro/hook/verse/bridge.",
+      "releaseDate": "2026-08-24"
+    },
+    {
+      "id": "play-4-bahb",
+      "title": "Play 4 Bahb",
+      "bpm": 132,
+      "key": "G# Minor",
+      "genre": "Trap / Drill",
+      "tags": [
+        "Drill",
+        "Sliding 808s",
+        "Dark",
+        "UK Style"
+      ],
+      "audioUrl": "https://myaiplug.github.io/signal-chain/beats/play-4-bahb.m4a",
+      "producedBy": "The Beat Mob AI",
+      "license": "unlimited",
+      "price": {
+        "single": 19.99,
+        "bundle5": 69.99,
+        "bundle10": 99.99
+      },
+      "description": "UK drill influenced trap with signature sliding 808s and syncopated hi-hats. Dark, menacing atmosphere for aggressive delivery.",
+      "releaseDate": "2026-08-24"
+    },
+    {
+      "id": "south-atlanta-130-v1",
+      "title": "South Atlanta 130 (v1)",
+      "bpm": 130,
+      "key": "A Minor",
+      "genre": "Atlanta Trap",
+      "tags": [
+        "Atlanta",
+        "Trap",
+        "Zaytoven Style",
+        "Bell Melody"
+      ],
+      "audioUrl": "https://myaiplug.github.io/signal-chain/beats/south-atlanta-130-v1.m4a",
+      "producedBy": "The Beat Mob AI",
+      "license": "unlimited",
+      "price": {
+        "single": 19.99,
+        "bundle5": 69.99,
+        "bundle10": 99.99
+      },
+      "description": "Zaytoven-inspired Atlanta trap at 130 BPM. Sparkling bell melody, rolling hi-hats, deep 808s. Classic South sound for melodic trap flows.",
+      "releaseDate": "2026-08-24"
+    },
+    {
+      "id": "south-atlanta-130-v2",
+      "title": "South Atlanta 130 (v2)",
+      "bpm": 130,
+      "key": "A Minor",
+      "genre": "Atlanta Trap",
+      "tags": [
+        "Atlanta",
+        "Trap",
+        "Alternate Mix",
+        "Different Drums"
+      ],
+      "audioUrl": "https://myaiplug.github.io/signal-chain/beats/south-atlanta-130-v2.m4a",
+      "producedBy": "The Beat Mob AI",
+      "license": "unlimited",
+      "price": {
+        "single": 19.99,
+        "bundle5": 69.99,
+        "bundle10": 99.99
+      },
+      "description": "Alternate drum pattern on the South Atlanta 130 session. Same melody, different pocket. Gives you options for different vocal approaches.",
+      "releaseDate": "2026-08-24"
+    },
+    {
+      "id": "south-atlanta-130-v3",
+      "title": "South Atlanta 130 (v3)",
+      "bpm": 130,
+      "key": "A Minor",
+      "genre": "Atlanta Trap",
+      "tags": [
+        "Atlanta",
+        "Trap",
+        "Minimal",
+        "Space for Vocals"
+      ],
+      "audioUrl": "https://myaiplug.github.io/signal-chain/beats/south-atlanta-130-v3.m4a",
+      "producedBy": "The Beat Mob AI",
+      "license": "unlimited",
+      "price": {
+        "single": 19.99,
+        "bundle5": 69.99,
+        "bundle10": 99.99
+      },
+      "description": "Stripped-back version with more space for vocals. Minimal drum arrangement, melody takes center stage. Ideal for melodic rappers and singers.",
+      "releaseDate": "2026-08-24"
+    },
+    {
+      "id": "south-memphis-78",
+      "title": "South Memphis 78",
+      "bpm": 78,
+      "key": "D Minor",
+      "genre": "Memphis Phonk / Trap",
+      "tags": [
+        "Phonk",
+        "Slow",
+        "Dark",
+        "Cowbell",
+        "Classic"
+      ],
+      "audioUrl": "https://myaiplug.github.io/signal-chain/beats/south-memphis-78.m4a",
+      "producedBy": "The Beat Mob AI",
+      "license": "unlimited",
+      "price": {
+        "single": 19.99,
+        "bundle5": 69.99,
+        "bundle10": 99.99
+      },
+      "description": "Authentic Memphis phonk at half-time 78 BPM. Distorted cowbell, lo-fi texture, sinking 808s. The sound that defined an underground movement.",
+      "releaseDate": "2026-08-24"
+    },
+    {
+      "id": "this-one-slaps",
+      "title": "This One Slaps",
+      "bpm": 136,
+      "key": "C Minor",
+      "genre": "Trap / Banger",
+      "tags": [
+        "Banger",
+        "Hard",
+        "Simple",
+        "Effective"
+      ],
+      "audioUrl": "https://myaiplug.github.io/signal-chain/beats/this-one-slaps.m4a",
+      "producedBy": "The Beat Mob AI",
+      "license": "unlimited",
+      "price": {
+        "single": 19.99,
+        "bundle5": 69.99,
+        "bundle10": 99.99
+      },
+      "description": "Straight-up banger. No frills, just hard-hitting drums and a hypnotic loop. Sometimes simple hits hardest.",
+      "releaseDate": "2026-08-24"
+    },
+    {
+      "id": "trap-heavy-142-v3",
+      "title": "Trap Heavy 142 (v3)",
+      "bpm": 142,
+      "key": "F# Minor",
+      "genre": "Trap",
+      "tags": [
+        "Heavy",
+        "Polished",
+        "Version 3",
+        "Refined"
+      ],
+      "audioUrl": "https://myaiplug.github.io/signal-chain/beats/trap-heavy-142-v3.m4a",
+      "producedBy": "The Beat Mob AI",
+      "license": "unlimited",
+      "price": {
+        "single": 19.99,
+        "bundle5": 69.99,
+        "bundle10": 99.99
+      },
+      "description": "Refined version with better mix balance. 808 sits cleaner, hi-hats more defined. Production polish on the same core idea.",
+      "releaseDate": "2026-08-24"
+    },
+    {
+      "id": "trap-heavy-142-v5",
+      "title": "Trap Heavy 142 (v5)",
+      "bpm": 142,
+      "key": "F# Minor",
+      "genre": "Trap",
+      "tags": [
+        "Heavy",
+        "Final",
+        "Version 5",
+        "Mastered"
+      ],
+      "audioUrl": "https://myaiplug.github.io/signal-chain/beats/trap-heavy-142-v5.m4a",
+      "producedBy": "The Beat Mob AI",
+      "license": "unlimited",
+      "price": {
+        "single": 19.99,
+        "bundle5": 69.99,
+        "bundle10": 99.99
+      },
+      "description": "Final mastered version of the 142 BPM trap session. Streaming-ready loudness, polished transients, maximum impact.",
+      "releaseDate": "2026-08-24"
+    },
+    {
+      "id": "midnight-shadow",
+      "title": "Midnight Shadow",
+      "bpm": 140,
+      "key": "A Minor",
+      "genre": "Trap",
+      "tags": [
+        "A Minor Trap"
+      ],
+      "audioUrl": "https://myaiplug.github.io/signal-chain/beats/midnight-shadow-140bpm.m4a",
+      "producedBy": "The Beat Mob AI",
+      "license": null,
+      "price": null,
+      "description": "From the Signal Chain beat player playlist (A Minor Trap, 140 BPM).",
+      "previewOnly": true
+    }
+  ],
+  "discountNote": "User-selected 50% off source singles: $19.99 \u2192 $9.99 (half of 19.99 is 9.995; displayed as 9.99). Not from Signal Chain source discount field.",
+  "sale": {
+    "original": 19.99,
+    "percentOff": 50,
+    "salePrice": 9.99,
+    "roundingNote": "19.99/2=9.995 displayed as 9.99"
+  }
+}
