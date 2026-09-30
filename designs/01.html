@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Editorial · The Beat Mob</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+
+:root {
+  --paper: #f3eadc;
+  --ink: #12100e;
+  --rule: #c9b8a4;
+  --oxblood: #6e1f28;
+  --muted: #6a5c50;
+  --player-h: 88px;
+  --serif: "Libre Baskerville", Georgia, serif;
+  --sans: "Source Sans 3", "Segoe UI", sans-serif;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; min-height: 100vh; padding-bottom: calc(var(--player-h) + 24px);
+  background: var(--paper); color: var(--ink);
+  font-family: var(--sans);
+}
+a { color: var(--oxblood); }
+.masthead {
+  max-width: 720px; margin: 0 auto; padding: 2.5rem 1.25rem 1rem;
+  border-bottom: 1px solid var(--ink);
+}
+.design-name {
+  font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--oxblood); margin-bottom: 0.75rem;
+}
+.masthead h1 {
+  font-family: var(--serif); font-weight: 700; font-size: clamp(2rem, 5vw, 3.2rem);
+  margin: 0; line-height: 1.15;
+}
+.masthead .deck {
+  margin: 0.9rem 0 0; max-width: 36rem; color: var(--muted); font-size: 1rem; line-height: 1.55;
+}
+.nav {
+  display: flex; gap: 1.25rem; margin-top: 1.25rem; font-size: 0.78rem;
+  letter-spacing: 0.08em; text-transform: uppercase;
+}
+.nav a { text-decoration: none; color: var(--ink); border-bottom: 1px solid transparent; }
+.nav a:hover { border-bottom-color: var(--oxblood); color: var(--oxblood); }
+
+.toc {
+  max-width: 720px; margin: 0 auto; padding: 0.5rem 1.25rem 2rem;
+}
+.toc-label {
+  font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--muted); padding: 1.4rem 0 0.6rem; border-bottom: 1px solid var(--rule);
+}
+#track-list { display: block; }
+.track-row {
+  display: grid; grid-template-columns: 2.5rem 1fr auto;
+  gap: 0.75rem; align-items: baseline;
+  width: 100%; text-align: left; background: none; border: 0;
+  border-bottom: 1px solid var(--rule); padding: 0.85rem 0;
+  cursor: pointer; color: inherit; font: inherit;
+}
+.track-row:hover .track-title { color: var(--oxblood); }
+.track-row.is-current .track-title { color: var(--oxblood); font-style: italic; }
+.track-num { font-family: var(--serif); font-size: 0.95rem; color: var(--muted); }
+.track-title {
+  display: block; font-family: var(--serif); font-size: 1.05rem; line-height: 1.3;
+}
+.track-sub { display: block; font-size: 0.75rem; color: var(--muted); margin-top: 0.2rem; }
+.track-meta { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.04em; }
+
+.player {
+  position: fixed; left: 0; right: 0; bottom: 0; min-height: var(--player-h);
+  background: #efe4d4; border-top: 1px solid var(--ink);
+}
+.player-inner {
+  max-width: 720px; margin: 0 auto; padding: 0.55rem 1.25rem;
+  display: grid; grid-template-columns: 1fr 1.4fr auto; gap: 0.85rem; align-items: center;
+}
+.now { display: flex; gap: 0.7rem; align-items: center; min-width: 0; }
+.now-art {
+  width: 42px; height: 42px; border: 1px solid var(--ink);
+  display: grid; place-items: center; font-family: var(--serif); font-size: 0.75rem;
+  background: var(--paper); color: var(--oxblood);
+}
+.now-title { font-family: var(--serif); font-size: 0.92rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.now-sub { font-size: 0.7rem; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.transport-controls { display: flex; justify-content: center; gap: 0.4rem; }
+.t-btn {
+  width: 34px; height: 34px; border: 1px solid var(--ink); background: transparent;
+  display: grid; place-items: center; cursor: pointer;
+}
+.t-btn.main { background: var(--oxblood); color: var(--paper); border-color: var(--oxblood); }
+.t-btn svg { width: 16px; height: 16px; }
+.progress-row { display: grid; grid-template-columns: 36px 1fr 36px; gap: 0.4rem; align-items: center; margin-top: 0.3rem; }
+.time { font-size: 0.65rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.seek, .volume {
+  -webkit-appearance: none; appearance: none; width: 100%; height: 2px;
+  background: var(--rule); outline: none;
+}
+.seek::-webkit-slider-thumb, .volume::-webkit-slider-thumb {
+  -webkit-appearance: none; width: 10px; height: 10px; border-radius: 50%; background: var(--oxblood);
+}
+.volume { width: 70px; }
+.player-side { display: flex; align-items: center; gap: 0.6rem; }
+.ghost { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; color: var(--ink); }
+@media (max-width: 700px) {
+  .player-inner { grid-template-columns: 1fr; }
+  .player-side { display: none; }
+  body { padding-bottom: 150px; }
+}
+
+  </style>
+</head>
+<body data-design="Editorial">
+
+  <header class="masthead">
+    <div class="design-name">Design · Editorial</div>
+    <h1>The Beat Mob<br/>Collective Vault · Vol. 1</h1>
+    <p class="deck">Thirteen tagged trap instrumentals. A contents page for the vault — skim, seek, license.</p>
+    <nav class="nav">
+      <a href="../index.html">Store home</a>
+      <a href="../discount.html">Discount rack</a>
+      <a href="https://thebeatmob.gumroad.com/" target="_blank" rel="noopener noreferrer">Gumroad</a>
+    </nav>
+  </header>
+  <section class="toc">
+    <div class="toc-label">Contents · 13 cuts</div>
+    <div id="track-list"></div>
+  </section>
+
+
+    <div class="player" role="region" aria-label="Beat player">
+      <div class="player-inner">
+        <div class="now">
+          <div class="now-art" id="now-art">BM</div>
+          <div class="now-text">
+            <div class="now-title" id="now-title">Select a beat</div>
+            <div class="now-sub" id="now-sub">Vault Vol. 1</div>
+          </div>
+        </div>
+        <div class="transport">
+          <div class="transport-controls">
+            <button class="t-btn" id="btn-prev" type="button" aria-label="Previous"></button>
+            <button class="t-btn main" id="btn-play" type="button" aria-label="Play or pause"></button>
+            <button class="t-btn" id="btn-next" type="button" aria-label="Next"></button>
+          </div>
+          <div class="progress-row">
+            <span class="time" id="cur-time">0:00</span>
+            <input class="seek" id="seek" type="range" min="0" max="1000" value="0" aria-label="Seek" />
+            <span class="time" id="dur-time">0:00</span>
+          </div>
+        </div>
+        <div class="player-side">
+          <input class="volume" id="volume" type="range" min="0" max="1" step="0.01" value="0.9" aria-label="Volume" />
+          <a class="ghost" href="https://thebeatmob.gumroad.com/" target="_blank" rel="noopener noreferrer">License</a>
+        </div>
+      </div>
+    </div>
+
+
+<script src="../js/player-core.js"></script>
+<script src="../js/vault-data.js"></script>
+<script>
+(() => {
+  const TRACKS = window.BEATMOB_VAULT_TRACKS;
+  const list = document.getElementById("track-list");
+  const meter = document.getElementById("meter");
+
+  function render(state) {
+    list.innerHTML = TRACKS.map((t, i) => {
+      const current = state && state.index === i;
+      const playing = current && state.playing;
+      const bpm = t.bpm != null ? t.bpm + " BPM" : "";
+      const num = String(t.num).padStart(2, "0");
+      return `<button class="track-row${current ? " is-current" : ""}${playing ? " is-playing" : ""}" type="button" data-index="${i}" aria-current="${current ? "true" : "false"}">
+        <span class="track-num">${playing ? "❚❚" : num}</span>
+        <span class="track-main">
+          <span class="track-title">${t.title}</span>
+          <span class="track-sub">${t.note || "Vault Vol. 1"}${bpm ? " · " + bpm : ""}</span>
+        </span>
+        <span class="track-meta">${bpm || "—"}</span>
+      </button>`;
+    }).join("");
+    if (meter) meter.classList.toggle("is-live", !!(state && state.playing));
+  }
+
+  const player = window.BeatMobPlayer.createPlayer({
+    tracks: TRACKS,
+    onChange: (state) => render(state),
+  });
+
+  list.addEventListener("click", (e) => {
+    const row = e.target.closest("[data-index]");
+    if (!row) return;
+    const i = Number(row.dataset.index);
+    const st = player.getState();
+    if (st.index === i && st.playing) player.pause();
+    else player.playIndex(i);
+  });
+
+  render(player.getState());
+})();
+</script>
+
+</body>
+</html>
