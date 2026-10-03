@@ -12,36 +12,40 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: decode base64 image payloads
+      - name: repair and decode brand images
         run: |
-          set -euo pipefail
-          changed=0
-          shopt -s nullglob
-          for f in img/web/*; do
-            [ -f "$f" ] || continue
-            sig=$(head -c 8 "$f" | od -An -tx1 | tr -d ' \n')
-            case "$sig" in
-              ffd8ff*|89504e47*) echo "already binary $f"; continue ;;
-            esac
-            if base64 -d "$f" > "$f.dec"; then
-              dsig=$(head -c 8 "$f.dec" | od -An -tx1 | tr -d ' \n')
-              case "$dsig" in
-                ffd8ff*|89504e47*)
-                  mv "$f.dec" "$f"
-                  changed=1
-                  echo "decoded $f"
-                  ;;
-                *)
-                  rm -f "$f.dec"
-                  echo "skip $f sig $dsig"
-                  ;;
-              esac
-            else
-              rm -f "$f.dec"
-              echo "decode failed $f"
-            fi
-          done
-          if [ "$changed" = "1" ]; then
+          python3 << 'PY'
+          import base64, pathlib
+          root = pathlib.Path("img/web")
+          banner = root / "cd-banner.jpg"
+          if banner.exists():
+              b = banner.read_bytes()
+              if b.startswith(b"/9j/") and len(b) == 24991:
+                  b = b[:15834] + b"c" + b[15834:]
+                  banner.write_bytes(b)
+                  print("repaired cd-banner")
+          changed = False
+          for f in sorted(root.iterdir()):
+              if not f.is_file():
+                  continue
+              raw = f.read_bytes()
+              if raw[:3] in (b"\xff\xd8\xff", b"\x89PN"):
+                  print("binary", f.name, len(raw))
+                  continue
+              try:
+                  dec = base64.b64decode(raw, validate=True)
+              except Exception as e:
+                  print("no decode", f.name, e)
+                  continue
+              if dec[:3] in (b"\xff\xd8\xff", b"\x89PN"):
+                  f.write_bytes(dec)
+                  changed = True
+                  print("decoded", f.name, len(dec))
+              else:
+                  print("not image", f.name, dec[:8])
+          pathlib.Path("/tmp/changed").write_text("1" if changed else "0")
+          PY
+          if [ "$(cat /tmp/changed)" = "1" ]; then
             git config user.name "NoDAW Labs"
             git config user.email "219323215+myaiplug@users.noreply.github.com"
             git add img/web
