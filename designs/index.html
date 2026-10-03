@@ -4,10 +4,14 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>The Beat Mob · design options</title>
+<link rel="icon" href="../img/mark.png" type="image/png" />
 <link rel="stylesheet" href="../css/store.css" />
 <style>
   body { padding: 2rem 1.2rem 4rem; }
-  h1 { font-family: Oswald, sans-serif; letter-spacing: 0.04em; }
+  .d-brand { display:flex; align-items:center; gap:0.75rem; margin-bottom:1.25rem; }
+  .d-brand img.mark { width:40px; height:40px; background:#f3ead8; -webkit-mask:url("../img/mark.png") center/contain no-repeat; mask:url("../img/mark.png") center/contain no-repeat; background-color:#f3ead8; }
+  .d-cover { width:min(280px,100%); border-radius:12px; border:1px solid rgba(232,197,71,0.35); margin:0.75rem 0 1.5rem; display:block; }
+  h1 { font-family: Oswald, sans-serif; letter-spacing: 0.04em; margin:0.2rem 0; }
   ol { list-style: none; padding: 0; display: grid; gap: 0.8rem; max-width: 40rem; }
   a.card { display: block; padding: 1rem 1.1rem; border: 1px solid rgba(255,255,255,0.12); border-radius: 12px; text-decoration: none; color: inherit; }
   a.card strong { display: block; font-size: 1.15rem; }
@@ -16,6 +20,11 @@
 </head>
 <body>
   <p><a href="../index.html">Back to the store</a></p>
+  <div class="d-brand">
+    <span class="brand-logo" style="width:40px;height:40px;display:inline-block" aria-hidden="true"></span>
+    <div class="brand-mark">The Beat <span>Mob</span></div>
+  </div>
+  <img class="d-cover" src="../img/vault-cover.png" alt="The Collective Vault Vol. 1" />
   <h1>Five looks, same 13 tracks</h1>
   <ol>
     <li><a class="card" href="01.html"><strong>01 Editorial</strong><span>Ivory paper, serif headlines, a contents-page track list.</span></a></li>
