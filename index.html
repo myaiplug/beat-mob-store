@@ -1,99 +1,79 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="The Beat Mob store — Collective Vault Vol. 1. Thirteen tagged trap instrumentals by Brian Jutz." />
-    <title>The Beat Mob Store · Vault Vol. 1</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/store.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="wrap header-inner">
-        <div class="brand-mark">The Beat <span>Mob</span></div>
-        <nav class="nav-links" aria-label="Primary">
-          <a class="active" href="index.html">Vault Player</a>
-          <a href="discount.html">Discount Rack</a>
-          <a href="designs/index.html">Designs</a>
-          <a class="btn-buy" href="https://thebeatmob.gumroad.com/" target="_blank" rel="noopener noreferrer">Buy on Gumroad</a>
-          <a href="https://thebeatmob.com/" target="_blank" rel="noopener noreferrer">Shop</a>
-        </nav>
-      </div>
-    </header>
-
-    <main class="wrap">
-      <section class="hero">
-        <div class="hero-kicker">Brian Jutz · The Beat Mob</div>
-        <h1>Collective <em>Vault · Vol. 1</em></h1>
-        <p class="hero-copy">
-          Thirteen trap instrumentals from the Signal Chain vault player — produced, mixed,
-          mastered, tagged and shipped. Previews are the original ~40-second tagged cuts.
-        </p>
-        <div class="hero-meta">
-          <span class="chip">13 tracks</span>
-          <span class="chip">Tagged previews</span>
-          <span class="chip">License via Gumroad / Shop</span>
-        </div>
-        <p class="hero-copy" style="margin-top:0.9rem;font-size:0.82rem;color:var(--ink-faint)">
-          Voice tags stay in the mix. The player eases them with live EQ + compression (not stem remixing)
-          so they sit lower than the raw Signal Chain previews. Scrub the progress bar to skim.
-        </p>
-      </section>
-
-      <section class="panel" aria-label="Vault playlist player">
-        <span class="rivet-bl" aria-hidden="true"></span>
-        <span class="rivet-br" aria-hidden="true"></span>
-        <div class="panel-head">
-          <div class="panel-label">Vault deck · 13 cuts</div>
-          <div class="panel-meter" id="meter" aria-hidden="true">
-            <span></span><span></span><span></span><span></span><span></span>
-          </div>
-        </div>
-        <div class="track-list" id="track-list"></div>
-      </section>
-    </main>
-
-    <footer class="wrap site-footer">
-      <div>© The Beat Mob · Brian Jutz. Vault playlist sourced from Signal Chain; theme is original.</div>
-      <div>
-        <a href="discount.html">Discount rack →</a>
-        ·
-        <a href="https://thebeatmob.gumroad.com/" target="_blank" rel="noopener noreferrer">Gumroad</a>
-      </div>
-    </footer>
-
-    <div class="player" role="region" aria-label="Beat player">
-      <div class="wrap player-inner">
-        <div class="now">
-          <div class="now-art" id="now-art">BM</div>
-          <div class="now-text">
-            <div class="now-title" id="now-title">Select a beat</div>
-            <div class="now-sub" id="now-sub">Vault Vol. 1</div>
-          </div>
-        </div>
-        <div class="transport">
-          <div class="transport-controls">
-            <button class="t-btn" id="btn-prev" type="button" aria-label="Previous"></button>
-            <button class="t-btn main" id="btn-play" type="button" aria-label="Play or pause"></button>
-            <button class="t-btn" id="btn-next" type="button" aria-label="Next"></button>
-          </div>
-          <div class="progress-row">
-            <span class="time" id="cur-time">0:00</span>
-            <input class="seek" id="seek" type="range" min="0" max="1000" value="0" aria-label="Seek" />
-            <span class="time" id="dur-time">0:00</span>
-          </div>
-        </div>
-        <div class="player-side">
-          <input class="volume" id="volume" type="range" min="0" max="1" step="0.01" value="0.9" aria-label="Volume" />
-          <a class="ghost-btn" href="https://thebeatmob.gumroad.com/" target="_blank" rel="noopener noreferrer">License</a>
-        </div>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Beat Mob Store · Vault Vol. 1</title>
+<link rel="icon" href="img/mark.png" type="image/png" />
+<link rel="stylesheet" href="css/store.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body class="page-vault">
+<header class="site-header">
+  <a class="brand" href="index.html">
+    <span class="brand-mark" aria-hidden="true"></span>
+    <span class="brand-text">THE BEAT MOB</span>
+  </a>
+  <nav class="site-nav">
+    <a href="index.html" aria-current="page">Vault</a>
+    <a href="discount.html">Discount Rack</a>
+    <a href="designs/index.html">Designs</a>
+    <a href="https://thebeatmob.gumroad.com/" target="_blank" rel="noopener noreferrer">Gumroad</a>
+    <a href="https://thebeatmob.com/" target="_blank" rel="noopener noreferrer">Shop</a>
+  </nav>
+</header>
+<main class="vault-layout">
+  <section class="vault-hero">
+    <img class="vault-cover" src="img/vault-cover.png" alt="The Collective Vault Vol. 1" width="640" height="640" />
+    <div class="vault-copy">
+      <p class="eyebrow">Trap Instrumentals · Vol. 1</p>
+      <h1>The Collective Vault</h1>
+      <p class="lede">Thirteen tagged cuts from The Beat Mob. Preview in the player, license on Gumroad.</p>
+      <div class="gold-rule" aria-hidden="true"></div>
+      <p class="price-line"><span class="price">Vault pack</span> · 13 tracks</p>
+    </div>
+  </section>
+  <section class="vault-list-wrap" aria-label="Track list">
+    <div id="track-list" class="track-list"></div>
+  </section>
+  <section class="brand-panel" aria-label="Brand">
+    <img src="img/brand-scene.png" alt="The Beat Mob producers creators elite" class="brand-scene" width="800" height="450" />
+  </section>
+</main>
+<footer class="site-footer">
+  <p>© The Beat Mob · Producers Creators Elite</p>
+</footer>
+<div class="player" role="region" aria-label="Beat player">
+  <div class="player-inner">
+    <div class="now">
+      <div class="now-art" id="now-art">BM</div>
+      <div class="now-text">
+        <div class="now-title" id="now-title">Select a beat</div>
+        <div class="now-sub" id="now-sub">Vault Vol. 1</div>
       </div>
     </div>
-
-    <script src="js/player-core.js"></script>
-    <script src="js/vault.js"></script>
-  </body>
+    <div class="transport">
+      <div class="transport-controls">
+        <button class="t-btn" id="btn-prev" type="button" aria-label="Previous"></button>
+        <button class="t-btn main" id="btn-play" type="button" aria-label="Play or pause"></button>
+        <button class="t-btn" id="btn-next" type="button" aria-label="Next"></button>
+      </div>
+      <div class="progress-row">
+        <span class="time" id="cur-time">0:00</span>
+        <input class="seek" id="seek" type="range" min="0" max="1000" value="0" aria-label="Seek" />
+        <span class="time" id="dur-time">0:00</span>
+      </div>
+    </div>
+    <div class="player-side">
+      <input class="volume" id="volume" type="range" min="0" max="1" step="0.01" value="0.9" aria-label="Volume" />
+      <a class="ghost" href="https://thebeatmob.gumroad.com/" target="_blank" rel="noopener noreferrer">License</a>
+    </div>
+  </div>
+</div>
+<script src="js/player-core.js"></script>
+<script src="js/vault-data.js"></script>
+<script src="js/vault.js"></script>
+</body>
 </html>
