@@ -1,0 +1,50 @@
+name: materialize brand images
+on:
+  push:
+    paths:
+      - "img/web/**"
+      - ".github/workflows/materialize-images.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  decode:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: decode base64 image payloads
+        run: |
+          set -euo pipefail
+          changed=0
+          shopt -s nullglob
+          for f in img/web/*; do
+            [ -f "$f" ] || continue
+            sig=$(head -c 8 "$f" | od -An -tx1 | tr -d ' \n')
+            case "$sig" in
+              ffd8ff*|89504e47*) echo "already binary $f"; continue ;;
+            esac
+            if base64 -d "$f" > "$f.dec"; then
+              dsig=$(head -c 8 "$f.dec" | od -An -tx1 | tr -d ' \n')
+              case "$dsig" in
+                ffd8ff*|89504e47*)
+                  mv "$f.dec" "$f"
+                  changed=1
+                  echo "decoded $f"
+                  ;;
+                *)
+                  rm -f "$f.dec"
+                  echo "skip $f sig $dsig"
+                  ;;
+              esac
+            else
+              rm -f "$f.dec"
+              echo "decode failed $f"
+            fi
+          done
+          if [ "$changed" = "1" ]; then
+            git config user.name "NoDAW Labs"
+            git config user.email "219323215+myaiplug@users.noreply.github.com"
+            git add img/web
+            git commit -m "Materialize brand image binaries"
+            git push
+          fi
